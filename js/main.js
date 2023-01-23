@@ -21,15 +21,17 @@ const reportes = $('#reportes')
 
 
 let mostrarSeccionBalance = () =>{
-   balance.classList.remove('oculto')
    categoria.classList.add('oculto')
    reportes.classList.add('oculto')
+   balance.classList.remove('oculto')
+  
 }
 
 let mostrarSeccionCategoria = () =>{
    categoria.classList.remove('oculto')
    balance.classList.add('oculto')
    reportes.classList.add('oculto')
+
 }
 
 let mostrarSeccionReportes = () =>{

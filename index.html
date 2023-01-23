@@ -6,6 +6,7 @@
    <title>AhorrADAs</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
    <header class="is-flex  is-justify-content-space-between py-3 px-3 has-background-primary is-align-items-center">
@@ -14,28 +15,131 @@
          AhorrADAs
       </h1>
       <nav>
-         <button class="button">
+         <button class="button boton-balance">
             <i class="fas fa-chart-line mr-2" aria-hidden="true"></i>
             Balance
          </button>
-         <button class="button">
+         <button class="button boton-categorias">
             <i class="fas fa-tag mr-2" aria-hidden="true"></i>
             Categorias
          </button>
-         <button class="button">
+         <button class="button boton-reportes">
             <i class="fas fa-chart-pie mr-2" aria-hidden="true"></i>
             Reportes
          </button>
       </nav>
    </header>
 
-   <section>
-      <h2>Reportes</h2>
-      <div>
-         <img src="./img/chart.svg" alt="">
-         <h4>Operaciones insuficientes</h4>
-         <p>Prueba agregando más operaciones</p>
+
+   <section id="balance">
+     <div class="is-flex is-justify-content-center my-6">
+         <div class="column is-3">
+            <div class="balance box  column">
+               <h2 class="subtitle">Balance</h2>
+               <div>
+                  <div class="column is-flex is-justify-content-space-between">
+                     <h4>Ganancias</h4>
+                     <p>+$0</p>
+                  </div>
+                  <div class="column is-flex is-justify-content-space-between">
+                     <h4>Gastos</h4>
+                     <p>-$0</p>
+                  </div>
+                  <div class="column is-flex is-justify-content-space-between">
+                     <h4 class="subtitle">Total</h4>
+                     <p>$0</p>
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="box filtros column">
+               <div class="is-flex is-justify-content-space-between">
+                  <h3 class="subtitle">Filtros</h3>
+                  <a>Ocultar filtros</a>
+               </div>
+               <form action="" class="is-flex  is-flex-direction-column">
+                  <label for="">Tipo</label>
+                  <select name="" id="" class="select">
+                     <option value="todos">Todos</option>
+                     <option value="gastos">Gastos</option>
+                     <option value="ganancias">Ganancias</option>
+                  </select>
+
+                  <label for="">Categoría</label>
+                  <select name="" id="" class="select">
+                     <option value="todas">Todas</option>
+                  </select>
+
+                  <label for="">Desde</label>
+                  <input type="date" class="input">
+                  
+                  <label for="">Ordenar por</label>
+                  <select name="" id="" class="select">
+                     <option value="todos">Más reciente</option>
+                     <option value="gastos">Menos reciente</option>
+                     <option value="ganancias">Mayor monto</option>
+                     <option value="todos">Menor monto</option>
+                     <option value="gastos">Gastos</option>
+                     <option value="gastos">A/Z</option>
+                     <option value="gastos">Z/A</option>
+                  </select>
+
+               </form>
+            </div>
+         </div>
+
+         <div class="box operaciones column is-6">
+            <div class="is-flex is-justify-content-space-between">
+               <h3 class="subtitle">Operaciones</h3>
+               <button class="button has-background-primary has-text-white-bis">+ Nueva operación</button>
+            </div> 
+            <div class="is-flex is-flex-direction-column is-align-items-center">
+               <img src="./img/wallet.svg" alt="" width="400px">
+               <h4 class="py-4 subtitle">Sin resultados</h4>
+               <p>Cambia los filtros o agrega operaciones</p>
+            </div>
+         </div>
       </div>
    </section>
+
+
+ 
+   <section id="categoria" class="oculto">
+      <div class="is-flex is-justify-content-center is-align-items-center">
+         <div class="box column is-8 my-6">
+            <h2 class="subtitle">Categorías</h2>
+            <label for="">Nombre</label>
+            <div class="is-flex">
+               <input type="text" class="input">
+               <button class="button ml-2">Agregar</button>
+            </div>
+            <div id="ejemplo-de-categoria">
+               <div class="column is-flex is-justify-content-space-between">
+                  <p>Transporte</p>
+                  <div>
+                     <a href="">Editar</a>
+                     <a href="">Eliminar</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="reportes" class="oculto">
+      <div class="is-flex is-justify-content-center my-6">
+         <div class="box column is-6">
+            <h2 class="subtitle">Reportes</h2>
+            <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+               <img src="./img/chart.svg" alt="" width="500px">
+               <h4>Operaciones insuficientes</h4>
+               <p>Prueba agregando más operaciones</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script src="./js/main.js"></script>
 </body>
 </html>
